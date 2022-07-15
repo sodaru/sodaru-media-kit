@@ -35,6 +35,7 @@
     "@mui/material": "^5.9.0",
     "@solib/ui-components": "^1.3.3",
     "@types/node": "^18.0.4",
+    "eslint-config-next": "^12.2.2",
     "eslint-config-sodaru": "^1.0.0",
     "next": "^12.2.2",
     "prettier-config-sodaru": "^1.0.0",
@@ -49,7 +50,8 @@
   "prettier": "prettier-config-sodaru",
   "eslintConfig": {
     "extends": [
-      "eslint-config-sodaru"
+      "eslint-config-sodaru",
+      "next"
     ]
   }
 }
