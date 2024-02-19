@@ -1,8 +1,10 @@
-import { demoPage } from "../node_modules/@solib/ui-components/dist/demo-utils/demoLayout";
-import { getStaticPropsFactory } from "../node_modules/@solib/ui-components/dist/demo-utils/staticProps";
+import { Container } from "@mui/material";
+import { Logos } from "../src";
 
-const Index = demoPage(undefined, "home");
+const LogosDemo = () => (
+  <Container maxWidth="lg">
+    <Logos />
+  </Container>
+);
 
-export default Index;
-
-export const getStaticProps = getStaticPropsFactory(["home"]);
+export default LogosDemo;
