@@ -1,0 +1,54 @@
+{
+  "name": "sodaru-media-kit",
+  "version": "1.0.0",
+  "description": "Contains Logos of Sodaru and its Products",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "clean": "npx rimraf dist",
+    "prettier": "npx prettier --check --ignore-unknown ./**/*",
+    "eslint": "npx eslint ./ --no-error-on-unmatched-pattern",
+    "tsc": "npx tsc --project tsconfig.build.json",
+    "build": "npm run prettier && npm run eslint && npm run clean && npm run tsc",
+    "pretest": "npm run build",
+    "test": "npx next build",
+    "prepack": "npm run test",
+    "postversion": "git push --follow-tags",
+    "dev": "next dev",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:sodaru/sodaru-media-kit.git"
+  },
+  "author": "Raghavendra K R <raghavendra@sodaru.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/sodaru/sodaru-media-kit/issues"
+  },
+  "homepage": "https://github.com/sodaru/sodaru-media-kit#readme",
+  "devDependencies": {
+    "@mui/material": "^5.9.0",
+    "@types/node": "^18.0.4",
+    "eslint-config-next": "^12.2.2",
+    "eslint-config-sodaru": "^1.0.0",
+    "mui-extended": "^1.2.0",
+    "next": "^14.1.0",
+    "prettier-config-sodaru": "^1.0.0",
+    "react": "^18.2.0",
+    "rimraf": "^3.0.2",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  },
+  "prettier": "prettier-config-sodaru",
+  "eslintConfig": {
+    "extends": [
+      "eslint-config-sodaru",
+      "next"
+    ]
+  }
+}
