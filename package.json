@@ -1,6 +1,6 @@
 {
   "name": "sodaru-media-kit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Contains Logos of Sodaru and its Products",
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
